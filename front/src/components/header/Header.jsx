@@ -16,7 +16,7 @@ const headerNav = [
         path: '/movie'
     },
     {
-        display: 'Series',
+        display: 'Séries',
         path: '/tv'
     }
 ];
