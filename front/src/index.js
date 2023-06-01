@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { AppWrapper } from "./context/context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppWrapper>
+      <App />
+    </AppWrapper>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

@@ -34,15 +34,15 @@ export const getUserUpdateController = async (req, res) => {
 // POST UPDATE USER
 export const postUserUpdateController = async (req, res, next) => {
   try{
-    const {id, profil_pic, username} = req.body;
+    const {id} = req.body;
 
     // Update BDD
-    const idUserUpdate = await updateUser(req.body, id);
-
-    res.status(200).json(idUserUpdate);
+    await updateUser(req.body, id);
+    const user = await getUser(id);
+    res.status(200).json(user);
   
   } catch (err) {
-    res.status(404).json(error.message);
+    res.status(404).json(err.message);
   }
 }
 

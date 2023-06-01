@@ -22,6 +22,39 @@
     }
 }
 
+.login-btn {
+    padding: 0;
+}
+
+.login-btn:hover {
+    color: $white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dropdown {
+    background-color: $white;
+    color: $body-bg;
+    border-radius: $border-radius;
+    padding: 15px;
+    position: absolute;
+    top: 75px;
+    right: 0;
+
+    li:hover {
+        color: $main-color;
+    }
+}
+
+.relative {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header {
     height: $header-height;
     position: fixed;

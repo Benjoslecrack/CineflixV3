@@ -1,0 +1,15 @@
+@use "../../scss/" as *;
+
+.avatar-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+@include mobile {
+    .avatar-icon {
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+    }
+}
