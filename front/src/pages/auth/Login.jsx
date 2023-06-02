@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useAppContext } from "../../context/context.js";
 
@@ -43,7 +44,7 @@ export default function Login() {
         // Enregistrer le token JWT dans le contexte utilisateur
         dispatch("user", user);
         // Rediriger l'utilisateur vers la page de trading-book
-        history.push("/")
+        history.push("/");
       } else {
         const errorJson = await response.text();
         console.log("Erreur: ", errorJson);
@@ -168,20 +169,9 @@ export default function Login() {
           <h2 className="text-sm font-bold mb-3">
             Ou utilisez une autre méthode
           </h2>
-          <button
-            className="w-full py-2 mb-2 px-4 rounded-md border border-secondary text-secondary flex items-center"
-            type="submit"
-          >
-            <i className="bi bi-twitter mr-2"></i>
-            S'inscrire avec Twitter
-          </button>
-          <button
-            className="w-full py-2 mb-2 px-4 rounded-md border border-primary text-primary flex items-center"
-            type="submit"
-          >
-            <i className="bi bi-facebook mr-2"></i>
-            S'inscrire avec Facebook
-          </button>
+          <Link to="/auth/register">
+            S'inscrire
+          </Link>
           {error && (
             <div className="invalid-feedback text-red-500">{error}</div>
           )}

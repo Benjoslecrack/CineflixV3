@@ -89,6 +89,19 @@
     }
 }
 
+.add-watchlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2 {
+        margin-left: 1rem;
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
 .casts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));

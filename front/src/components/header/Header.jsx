@@ -41,8 +41,8 @@ const Header = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    // Router
-    const history = useHistory();
+  // Router
+  const history = useHistory();
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
   const handleLogout = () => {
@@ -90,30 +90,40 @@ const Header = () => {
               Connexion
             </Link>
           ) : (
-            <div className="relative cursor-pointer" onClick={handleAvatarClick} ref={dropdownRef}>
-                <Avatar
-                  src={`images/${sharedState.user.profil_pic}`}
-                  alt={sharedState.user.name}
-                />
-                {showDropdown && (
-                  <div className="dropdown">
-                    <ul>
-                      <li
-                      >
-                        <Link to="/profile" className="cursor-pointer">
-                          Profil
-                        </Link>
-                      </li>
-                      <li
-                        className="cursor-pointer"
-                        onClick={handleLogout}
-                      >
-                        Déconnexion
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </div>
+            <div
+              className="relative cursor-pointer"
+              onClick={handleAvatarClick}
+              ref={dropdownRef}
+            >
+              <Avatar
+                src={`images/${sharedState.user.profil_pic}`}
+                alt={sharedState.user.name}
+              />
+              {showDropdown && (
+                <div className="dropdown">
+                  <ul>
+                    <li>
+                      <Link to="/profile" className="cursor-pointer">
+                        Profil
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/watchlist" className="cursor-pointer">
+                        WatchList
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/watchedlist" className="cursor-pointer">
+                        Films vus
+                      </Link>
+                    </li>
+                    <li className="cursor-pointer" onClick={handleLogout}>
+                      Déconnexion
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
           )}
         </ul>
       </div>

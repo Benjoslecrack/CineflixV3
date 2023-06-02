@@ -11,7 +11,15 @@
 
     .btn {
         position: absolute;
-        top: 50%;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-green {
+        position: absolute;
+        top: 66%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
         transition: transform 0.3s ease, box-shadow 0.3s ease;

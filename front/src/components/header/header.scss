@@ -46,6 +46,11 @@
     li:hover {
         color: $main-color;
     }
+
+    @include mobile {
+        top: -175px;
+    }
+
 }
 
 .relative {
